@@ -36,7 +36,7 @@ abbreviation \<open>prover p \<equiv> \<mu> [] [] [p] = {}\<close>
 corollary \<open>prover p \<longleftrightarrow> (\<forall>i. semantics i p)\<close>
   by (simp flip: main)
 
-value \<open>prover (Neg (Con (Pro n) (Neg (Pro n))))\<close>
+value \<open>prover (Dis (Pro n) (Neg (Pro n)))\<close>
 
 primrec member where
   \<open>member _ [] = False\<close> |
